@@ -1,0 +1,11 @@
+{
+  "name": "building-a-sync-engine",
+  "author": {
+    "url": "https://matheuslanduci.com",
+    "name": "Matheus Landuci",
+    "email": "matheuslanduci@gmail.com"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4"
+  }
+}
