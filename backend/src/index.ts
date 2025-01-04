@@ -1,10 +1,13 @@
 import { serve } from '@hono/node-server'
 import { createNodeWebSocket } from '@hono/node-ws'
+import { cors } from 'hono/cors'
 import { Hono } from 'hono'
 
 const app = new Hono()
 
 const { injectWebSocket, upgradeWebSocket } = createNodeWebSocket({ app })
+
+app.use(cors())
 
 app.get('/', (c) => {
 	return c.text('Hello Hono!')

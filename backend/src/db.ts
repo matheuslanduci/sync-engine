@@ -1,4 +1,4 @@
-type Todo = {
+export type Todo = {
 	id: string
 	content: string
 	done: boolean
@@ -14,8 +14,8 @@ export const db = {
 		list: () => {
 			return todos
 		},
-		listAfter: (version: number) => {
-			return todos.filter((todo) => todo.version > version)
+		read: (id: string) => {
+			return todos.find((todo) => todo.id === id)
 		},
 		create: (todo: Todo) => {
 			todos.push(todo)
